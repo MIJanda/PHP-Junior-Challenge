@@ -18,6 +18,7 @@ Run:
 To run MinMaxSum.
 
 Or:
+
 `$ php src/CamelCase.php`
 
 To run CamelCase.
