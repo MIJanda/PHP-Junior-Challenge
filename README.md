@@ -28,10 +28,28 @@ Make sure you have PHPUnit installed.
 
 When PHPUnit is installed, run:
 
-`$ php vendor/bin/phpunit`
+`$ alias pu="php vendor/bin/phpunit"`
+
+To create an alias to ease execution of phpunit then run:
+
+`$ pu`
 
 This will run all the test suites.
 
-To run individual tests:
+To run individual test suites:
 
-`$ php vendor/bin/phpunit <TestDirectory> --filter <TestCase>`
+`$ pu <TestDirectory>`
+
+For example:
+
+`$ pu tests/CamelCaseTest.php`
+
+To run the CamelCaseTest suite.
+
+To run specific test run:
+
+`$ pu <TestDirectory> --filter <TestCase>`
+
+For example:
+
+`$ pu tests/MinMaxSumTest.php --filter testSortArray`
