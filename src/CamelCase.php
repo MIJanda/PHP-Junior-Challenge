@@ -17,3 +17,7 @@ class CamelCase
         return $this->count;
     }
 }
+
+$camel = new CamelCase();
+
+echo $camel->numberOfWords('saveChangesInTheEditor') . "\n";
