@@ -55,3 +55,10 @@ class MinMaxSum
         return $this->maxSum;
     }
 }
+
+
+$minMaxSum = new MinMaxSum();
+
+[$minSum, $maxSum] = $minMaxSum->minMax([9, 4, 6, 8, 2]);
+
+echo $minSum . " " . $maxSum . "\n";
