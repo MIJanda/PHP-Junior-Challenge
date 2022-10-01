@@ -4,15 +4,17 @@ namespace App;
 
 class MinMaxSum 
 {
-    protected $minSum = 0;
-    protected $maxSum = 0;
+    public int $minSum = 0;
+    public int $maxSum = 0;
 
-    public function minMax(array $array): array {
+    public function minMax(array $array) {
         // sort array in ascending order
         $sortedArray = $this->sortArray($array);
 
         $minSum = $this->minSum($sortedArray);
         $maxSum = $this->maxSum($sortedArray);
+
+        return [$minSum, $maxSum];
     }
 
     public function sortArray(array $array): array {
@@ -33,4 +35,23 @@ class MinMaxSum
         return $array;
     }
 
+    public function minSum(array $array): int {
+        foreach($array as $key => $value) {
+            if ($key == (count($array) - 1)) {
+                return $this->minSum;
+            }
+            $this->minSum += $value;
+        }
+    }
+
+    public function maxSum(array $array): int {
+        foreach($array as $key => $value) {
+            if ($key == 0) {
+                continue;
+            }
+            $this->maxSum += $value;
+        }
+
+        return $this->maxSum;
+    }
 }

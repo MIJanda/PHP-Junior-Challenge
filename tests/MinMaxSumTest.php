@@ -17,7 +17,8 @@ class MinMaxSumTest extends TestCase
 
     protected function tearDown(): void
     {
-        
+        $this->minMaxSum->minSum = 0;
+        $this->minMaxSum->maxSum = 0;
     }
     
     public function testMinMaxSumReturnsExpectedValues()
